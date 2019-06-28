@@ -123,10 +123,16 @@ function content (e) {
 	c[x].children[0].setAttribute("class","myhover mynow")
 	a.children[x].style.display="inline"
 }
+function hasher () {
+	hashemitter(parseInt(location.hash.slice(1)))
+}
+function hashemitter (h) {
+	if (!isNaN(h)) content(document.getElementById("listed").children[h].children[0])
+}
 
 </script>
 </head>
-<body>
+<body onload="hasher()">
 <footer>
 <div class="w3-container w3-third w3-center w3-cell w3-cell-middle">
 	<p>8&nbsp;(499)&nbsp;271&nbsp;55&nbsp;52&nbsp;-&nbsp;диспетчерская</p>
@@ -149,10 +155,22 @@ function content (e) {
 	</div>
 </div>
 <div class="w3-cell-row w3-row w3-black w3-bar">
-	<div>
-    <div class="w3-cell l2 w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-white">
-      <a href="#" class="smallcaps w3-button w3-block w3-hover-none w3-hover-text-white w3-black">Переход от УК к ТСЖ</a>
+	<div>		
+    <div class="w3-cell l2 w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-white w3-dropdown-hover" style="background-color:black">
+      <button class="smallcaps w3-button w3-block w3-hover-none w3-hover-text-white w3-black">Переход от УК к ТСЖ</button>
+      <div class="w3-dropdown-content w3-bar-block w3-white w3-card-4">
+		<a href="page.htm#0" onclick="hashemitter(0)" class="w3-bar-item w3-button w3-text-black">Основные показатели финансово-хозяйственной деятельности
+        </a><a href="page.htm#1" onclick="hashemitter(1)" class="w3-bar-item w3-button w3-text-black">Учредительные и другие документы
+        </a><a href="page.htm#2" onclick="hashemitter(2)" class="w3-bar-item w3-button w3-text-black">Фото-отчёты
+        </a><a href="page.htm#3" onclick="hashemitter(3)" class="w3-bar-item w3-button w3-text-black">Договоры с поставщиками ресурсов
+        </a><a href="page.htm#4" onclick="hashemitter(4)" class="w3-bar-item w3-button w3-text-black">Техническое обслуживание и страхование лифтов
+		</a><a href="page.htm#5" onclick="hashemitter(5)" class="w3-bar-item w3-button w3-text-black">Прочие договоры со сторонними организациями
+		</a><a href="page.htm#6" onclick="hashemitter(6)" class="w3-bar-item w3-button w3-text-black">Протоколы общих собраний
+		</a><a href="page.htm#7" onclick="hashemitter(7)" class="w3-bar-item w3-button w3-text-black">Протоколы заседаний Правления
+		</a><a href="page.htm#8" onclick="hashemitter(8)" class="w3-bar-item w3-button w3-text-black">Документы ревизионной Комиссии
+      </a></div>
     </div>
+    
     <div class="w3-cell l2 w3-bar-item w3-button w3-hover-none w3-border-black w3-bottombar w3-hover-border-white">
       <a href="#" class="smallcaps w3-button w3-block w3-hover-none w3-hover-text-white w3-black">Документы и отчетность</a>
     </div>
