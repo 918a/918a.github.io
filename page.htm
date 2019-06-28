@@ -10,6 +10,11 @@
 	font-family: custom;
 	src: url(Bahnschrift.ttf);
 }
+
+#revealed > div {
+	display: none;
+}
+
 body, body > * {
 	font-family: custom;
 }
@@ -92,7 +97,34 @@ footer {
 .table2 > div > div {
 	display:table-cell;
 }
+.myhover {
+	text-decoration: none;
+	cursor:pointer;
+}
+.mynow {
+	font-weight:bold;
+	text-decoration: underline;	
+}
+.myhover:hover {
+	font-weight:bold;
+}
 </style>
+<script>
+
+function content (e) {
+	var a = document.getElementById("revealed")
+	var c = e.parentNode.parentNode.children
+	var x = Array.prototype.indexOf.call(c, e.parentNode)
+	var l = c.length
+	for (var i=0;i<l;i++) {
+		c[i].children[0].setAttribute("class","myhover")
+		a.children[i].style.display=""
+	}
+	c[x].children[0].setAttribute("class","myhover mynow")
+	a.children[x].style.display="inline"
+}
+
+</script>
 </head>
 <body>
 <footer>
@@ -118,7 +150,7 @@ footer {
 </div>
 <div class="w3-cell-row w3-row w3-black w3-bar">
 	<div>
-    <div class="w3-cell l2 w3-bar-item w3-button w3-hover-none w3-border-white	 w3-bottombar w3-hover-border-white">
+    <div class="w3-cell l2 w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-white">
       <a href="#" class="smallcaps w3-button w3-block w3-hover-none w3-hover-text-white w3-black">Переход от УК к ТСЖ</a>
     </div>
     <div class="w3-cell l2 w3-bar-item w3-button w3-hover-none w3-border-black w3-bottombar w3-hover-border-white">
@@ -139,42 +171,81 @@ footer {
     </div>
 </div>
 <div style="min-height:100vh">
-<div class="table2" style="width:100%;min-height:100vh;border:1px solid black;border-collapse:collapse;">
-<div><div style="padding-left:10px;padding-right:10px;border:1px solid black;width:30%">
+<div class="table2" style="width:100%;min-height:100vh;border-collapse:collapse;">
+<div><div style="padding-left:10px;padding-right:10px;border-right:1px solid black;width:30%">
 
-<ul class="pointylist">
-<li><a href="#">Основные показатели финансово-хозяйственной деятельности
-</a></li><li><a href="#">Фото-отчёты
-</a></li><li><a href="#">Договоры с поставщиками ресурсов
-</a></li><li><a href="#">Техническое обслуживание и страхование лифтов
-</a></li><li><a href="#">Прочие договоры со сторонними организациями
-</a></li><li><a href="#">Протоколы общих собраний
-</a></li><li><a href="#">Протоколы заседаний Правления
-</a></li><li><a href="#">Документы ревизионной Комиссии
+<ul id="listed" class="pointylist">
+<li><a class="myhover" onclick="content(this)">Основные показатели финансово-хозяйственной деятельности
+</a></li><li><a class="myhover" onclick="content(this)">Учредительные и другие документы
+</a></li><li><a class="myhover" onclick="content(this)">Фото-отчёты
+</a></li><li><a class="myhover" onclick="content(this)">Договоры с поставщиками ресурсов
+</a></li><li><a class="myhover" onclick="content(this)">Техническое обслуживание и страхование лифтов
+</a></li><li><a class="myhover" onclick="content(this)">Прочие договоры со сторонними организациями
+</a></li><li><a class="myhover" onclick="content(this)">Протоколы общих собраний
+</a></li><li><a class="myhover" onclick="content(this)">Протоколы заседаний Правления
+</a></li><li><a class="myhover" onclick="content(this)">Документы ревизионной Комиссии
 </a></li></ul>
 
 	
 </div>
-<div style="padding-left:10px;padding-right:10px;text-align:left;border:1px solid black;width:70%">
 
+<div id="revealed" style="padding-left:10px;padding-right:10px;text-align:left;width:70%">
+
+<div>
 <ul class="sublist">
-<li><a class="w3-hover-green" href="#">ТСЖ «Квартал 9/18 А1»</a><br>
+<li><a class="myhover" href="#">ТСЖ «Квартал 9/18 А1»</a><br>
 - Устав ТСЖ «Квартал 9/18 А1»<br>
 - Свидетельство ОГРН<br>
 - Члены правления и ревизионной комиссии<br>
-</li><li><a class="w3-hover-green" href="#">ТСЖ «Квартал 9/18 А2»</a><br>
+</li><li><a class="myhover" href="#">ТСЖ «Квартал 9/18 А2»</a><br>
 - Устав ТСЖ «Квартал 9/18 А2»<br>
 - Свидетельство ОГРН<br>
 - Члены правления и ревизионной комиссии<br>
-</li><li><a class="w3-hover-green" href="#">ТСН «Квартал 9/18 Паркинг А»</a><br>
+</li><li><a class="myhover" href="#">ТСН «Квартал 9/18 Паркинг А»</a><br>
 - Устав ТСН «Квартал 9/18 Паркинг А»<br>
 - Свидетельство ОГРН<br>
 - Члены правления и ревизионной комиссии<br>
 </li></ul>
+</div>
 
-</div></div>
+<div>
+Учредители
+</div>
+
+<div>
+Фото
+</div>
+
+<div>
+Договоры
+</div>
+
+<div>
+Тех
+</div>
+
+<div>
+Прочие
+</div>
+
+<div>
+Протоколы
+</div>
+
+<div>
+Заседания
+</div>
+
+<div>
+Ревизия
+</div>
+
+</div>
+
+
 </div>
 </div>
+</div>	
 <footer class="w3-black">
 <div class="w3-cell-row w3-black allheight">
 <div class="w3-container w3-cell w3-right-align w3-cell-bottom">
