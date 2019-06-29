@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="inner.css">
 <script src="inner.js"></script>
 </head>
-<body >
+<body onload="hasher()">
 <footer>
 <div class="w3-container w3-third w3-center w3-cell w3-cell-middle">
 	<p>8&nbsp;(499)&nbsp;271&nbsp;55&nbsp;52&nbsp;-&nbsp;диспетчерская</p>
@@ -40,9 +40,9 @@
 	<div id="menustate" class="w3-dropdown-content w3-bar-block w3-white w3-card-4"><a href="page0.htm#0" class="w3-bar-item w3-button w3-text-black">Сравнительная таблица УК и ТСЖ</a>
 <a href="page0.htm#1" class="w3-bar-item w3-button w3-text-black">Проблемы с текущей УК</a>
 <a href="page0.htm#2" class="w3-bar-item w3-button w3-text-black">Проект</a></div></div>
-<div class="w3-cell l2 w3-bar-item w3-button w3-hover-none w3-border-black w3-bottombar w3-hover-border-white w3-dropdown-hover" style="background-color:black">
+<div class="w3-cell l2 w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-white w3-dropdown-hover" style="background-color:black">
 	<button class="smallcaps w3-button w3-block w3-hover-none w3-hover-text-white w3-black">Документы и отчетность</button>
-	<div id="menustate" class="w3-dropdown-content w3-bar-block w3-white w3-card-4"><a href="page1.htm#0" class="w3-bar-item w3-button w3-text-black">Основные показатели финансово-хозяйственной деятельности</a>
+	<div id="menustate" class="w3-dropdown-content w3-bar-block w3-white w3-hide"><a href="page1.htm#0" class="w3-bar-item w3-button w3-text-black">Основные показатели финансово-хозяйственной деятельности</a>
 <a href="page1.htm#1" class="w3-bar-item w3-button w3-text-black">Учредительные и другие документы</a>
 <a href="page1.htm#2" class="w3-bar-item w3-button w3-text-black">Фото-отчёты</a>
 <a href="page1.htm#3" class="w3-bar-item w3-button w3-text-black">Договоры с поставщиками ресурсов</a>
@@ -69,62 +69,43 @@
 <div class="w3-cell l2 w3-bar-item w3-button w3-hover-none w3-border-black w3-bottombar w3-hover-border-white"><a href="page5.htm" class="smallcaps w3-button w3-block w3-hover-none w3-hover-text-white w3-black">Пожертвования</a></div>
 </div>
 </div>
-<div class="afterfooter contentcontainer">
-<img src="backg1.png">
-<div class="realcontent">
-
-	<div class="w3-bar" class="transparent">
-	<div class="middlefont welcome">
-	<u><b>Добро пожаловать!</b></u><br><br>
-	Этот сайт - это проект для нашего будущего ТСЖ. Здесь представлены основные разделы сайта, которые будут заполняться после организации ТСЖ по мере его работы. Вы можете увидеть, каким будет наше ТСЖ и какую информацию и сервисы смогут получить жители.
-	</div>
-	</div>
-		
-	<div class="w3-container w3-center basepadding"><b>
-	<div class="middlefont">
-	  <div class="w3-container w3-cell w3-cell-middle w3-padding s3">
-		<a href="#" class="link">
-		<div class="w3-cell-row mainmenu">
-		<div class="w3-container w3-center w3-cell w3-cell-middle middlefont">СРАВНИТЕЛЬНАЯ ТАБЛИЦА УК И ТСЖ</div>
-		</div></a>
-	  </div>
-	  <div class="w3-container w3-cell w3-cell-middle w3-padding s3">
-		<a href="#" class="link">
-		<div class="w3-cell-row mainmenu">
-		<div class="w3-container w3-center w3-cell w3-cell-middle middlefont">ПРОБЛЕМЫ С ТЕКУЩЕЙ УК</div>
-		</div></a>
-	  </div>
-	  <div class="w3-container w3-cell w3-cell-middle w3-padding s3">
-		<a href="#" class="link">
-		<div class="w3-cell-row mainmenu">
-		<div class="w3-container w3-center w3-cell w3-cell-middle middlefont">ПРОЕКТЫ И ПРЕДЛОЖЕНИЯ, ОПЫТ ДРУГИХ ДОМОВ</div>
-		</div></a>
-	  </div>
-	  <div class="w3-container w3-cell w3-cell-middle w3-padding s3">
-		<a href="#" class="link">
-		<div class="w3-cell-row mainmenu">
-		<div class="w3-container w3-center w3-cell w3-cell-middle middlefont">ОСНОВНЫЕ ВОПРОСЫ И ОТВЕТЫ НА НИХ</div>
-		</div></a>
-	  </div>
-	</b></div>
-	</div>
-
+<div style="min-height:100vh">
+<div class="table2" style="width:100%;min-height:100vh">
+<div><div style="padding-left:10px;padding-right:10px;border-right:1px solid black;width:30%;min-height:100vh;position:relative;">
+<div id="listed" class="pointylist">
+<a class="myhover" onclick="content(this)">Основные показатели финансово-хозяйственной деятельности</a><br>
+<a class="myhover" onclick="content(this)">Учредительные и другие документы</a><br>
+<a class="myhover" onclick="content(this)">Фото-отчёты</a><br>
+<a class="myhover" onclick="content(this)">Договоры с поставщиками ресурсов</a><br>
+<a class="myhover" onclick="content(this)">Техническое обслуживание и страхование лифтов</a><br>
+<a class="myhover" onclick="content(this)">Прочие договоры со сторонними организациями</a><br>
+<a class="myhover" onclick="content(this)">Протоколы общих собраний</a><br>
+<a class="myhover" onclick="content(this)">Протоколы заседаний Правления</a><br>
+<a class="myhover" onclick="content(this)">Документы ревизионной Комиссии</a><br>
+<a class="myhover" onclick="content(this)">Открытые письма собственников</a><br>
+<a class="myhover" onclick="content(this)">Тарифы на коммунальные услуги</a><br>
+</div>
+</div>
+<div style="width:3px"></div>
+<div id="revealed" style="border-left:1px double black;padding-left:10px;padding-right:10px;min-height:100vh;text-align:left;width:70%;position:absolute;">
+<div><ul class="sublist">
+<li><a class="myhover" href="#">ТСЖ «Квартал 9/18 А1»</a><br>
+- Устав ТСЖ «Квартал 9/18 А1»<br>
+- Свидетельство ОГРН<br>
+- Члены правления и ревизионной комиссии<br>
+</li><li><a class="myhover" href="#">ТСЖ «Квартал 9/18 А2»</a><br>
+- Устав ТСЖ «Квартал 9/18 А2»<br>
+- Свидетельство ОГРН<br>
+- Члены правления и ревизионной комиссии<br>
+</li><li><a class="myhover" href="#">ТСН «Квартал 9/18 Паркинг А»</a><br>
+- Устав ТСН «Квартал 9/18 Паркинг А»<br>
+- Свидетельство ОГРН<br>
+- Члены правления и ревизионной комиссии<br>
+</li></ul></div><div><ul>Страница в разработке</ul></div><div><ul>Страница в разработке</ul></div><div><ul>Страница в разработке</ul></div><div><ul>Страница в разработке</ul></div><div><ul>Страница в разработке</ul></div><div><ul>Страница в разработке</ul></div><div><ul>Страница в разработке</ul></div><div><ul>Страница в разработке</ul></div><div><ul>Страница в разработке</ul></div><div><ul>Страница в разработке</ul></div>
 </div>
 </div>
 </div>
-<div>
-	<div class="contacts">
-	Контакты:
-	<pre>
-	
-	
-	
-	</pre>
-	</div>
-</div>
-<div>
-
-</div>
+</div>	
 <footer class="w3-black">
 <div class="w3-cell-row w3-black allheight">
 <div class="w3-container w3-cell w3-right-align w3-cell-bottom">
