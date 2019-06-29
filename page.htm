@@ -1,275 +1,501 @@
 <!DOCTYPE html>
+
 <html>
+
 <head>
+
 <title>ТСЖ Квартал 9/18 А</title>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <link rel="stylesheet" href="w3.css">
+
 <style>
+
 @font-face {
+
 	font-family: custom;
+
 	src: url(Bahnschrift.ttf);
+
 }
+
+
 
 #revealed > div {
+
 	display: none;
+
 }
+
+
 
 body, body > * {
+
 	font-family: custom;
+
 }
+
 .mainmenu {
+
 	width:13em;
+
 	height:13em;
+
 	background:rgba(255,255,255,0.6)
+
 }
+
 .mainmenu:hover {
+
 	background:rgba(255,255,255,0.9)
+
 }
+
 html, body {
+
   height: 100%;
+
   margin: 0;
+
 }
+
 footer {
+
 	height: 3.75em;
+
 	font-family: custom;
+
 	font-size: 1.1em;
+
 }
+
 .contacts {
+
 	padding:2.2em;
+
 	font-size:1.2em;
+
 	line-height:1.3em;
+
 }
+
 .welcome {
+
 	padding: 2em;
+
 	line-height: 1.3em;
+
 	background: rgba(255,255,255,0.6);
+
 }
+
 .afterfooter > * {
+
 	width: 100%;
+
 }
+
 .contentcontainer {
+
 	position: relative;
+
 }
+
 .realcontent {
+
 	position: absolute;
+
 	top: 0px;
+
 	left: 0px;
+
 }
+
 .smallcaps {
+
   text-transform: uppercase;
+
 }
+
 .allheight {
+
 	height: 100%;
+
 }
+
 .smallfont {
+
 	font-size: 0.9em;
+
 }
+
 .middlefont {
+
 	font-size: 1.2em;
+
 }
+
 .giantfont {
+
 	font-size: 2.2em;
+
 }
+
 .transparent {
+
 	background:rgba(255,255,255,0.6)
+
 }
+
 .link {
+
 	text-decoration: none;
+
 }
+
 .table {
+
 	display:table;
+
 }
+
 .table > div {
+
 	display:table-row;
+
 }
+
 .table > div > div {
+
 	display:table-cell;
+
 	vertical-align:middle;
+
 	text-align:center;
+
 }
+
 .table2 {
+
 	display:table;
+
 }
+
 .table2 > div {
+
 	display:table-row;
+
 }
+
 .table2 > div > div {
+
 	display:table-cell;
+
 }
+
 .myhover {
+
+	padding-left:1em;
+
+	display:inline-block;
+
+	margin:5px;
+
 	text-decoration: none;
+
 	cursor:pointer;
+
 }
+
 .mynow {
+
 	font-weight:bold;
+
 	text-decoration: underline;	
+
 }
+
 .myhover:hover {
+
 	font-weight:bold;
+
 }
+
 </style>
+
 <script>
 
+
+
 function content (e) {
+
 	var a = document.getElementById("revealed")
-	var c = e.parentNode.parentNode.children
-	var x = Array.prototype.indexOf.call(c, e.parentNode)
+
+	var c = e.parentNode.children
+
+	var x = Array.prototype.indexOf.call(c, e)
+
 	var l = c.length
-	for (var i=0;i<l;i++) {
-		c[i].children[0].setAttribute("class","myhover")
-		a.children[i].style.display=""
+
+	for (var i=0;i<l;i+=2) {
+
+		c[i].setAttribute("class","myhover")
+
+		a.children[i/2].style.display=""
+
 	}
-	c[x].children[0].setAttribute("class","myhover mynow")
-	a.children[x].style.display="inline"
+
+	c[x].setAttribute("class","myhover mynow")
+
+	a.children[x/2].style.display="inline"
+
 }
+
 function hasher () {
+
 	hashemitter(parseInt(location.hash.slice(1)))
-}
-function hashemitter (h) {
-	if (!isNaN(h)) content(document.getElementById("listed").children[h].children[0])
+
 }
 
-</script>
-</head>
-<body onload="hasher()">
-<footer>
-<div class="w3-container w3-third w3-center w3-cell w3-cell-middle">
-	<p>8&nbsp;(499)&nbsp;271&nbsp;55&nbsp;52&nbsp;-&nbsp;диспетчерская</p>
-</div>
-<div class="w3-container w3-third w3-center w3-cell w3-cell-middle">
-	<p>Наш адрес: </p>
-</div>
-<div class="w3-container w3-third w3-center w3-cell w3-cell-middle">
-	<p>Почта для вопросов по ТСЖ: </p> 
-</div>
-</footer>
-<div class="afterfooter contentcontainer">
-	<img src="backg0.png">
-	<div class="realcontent allheight">
-		<div class="w3-cell-row allheight">
-		<div class="w3-container w3-cell w3-right-align w3-cell-middle">
-		<span class="giantfont"><b>ТСЖ Квартал 9/18 А&nbsp;&nbsp;&nbsp;</b></span>
-		</div>
-		</div>
-	</div>
-</div>
-<div class="w3-cell-row w3-row w3-black w3-bar">
-	<div>		
-    <div class="w3-cell l2 w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-white w3-dropdown-hover" style="background-color:black">
-      <button class="smallcaps w3-button w3-block w3-hover-none w3-hover-text-white w3-black">Переход от УК к ТСЖ</button>
-      <div class="w3-dropdown-content w3-bar-block w3-white w3-card-4">
-		<a href="page.htm#0" onclick="hashemitter(0)" class="w3-bar-item w3-button w3-text-black">Основные показатели финансово-хозяйственной деятельности
-        </a><a href="page.htm#1" onclick="hashemitter(1)" class="w3-bar-item w3-button w3-text-black">Учредительные и другие документы
-        </a><a href="page.htm#2" onclick="hashemitter(2)" class="w3-bar-item w3-button w3-text-black">Фото-отчёты
-        </a><a href="page.htm#3" onclick="hashemitter(3)" class="w3-bar-item w3-button w3-text-black">Договоры с поставщиками ресурсов
-        </a><a href="page.htm#4" onclick="hashemitter(4)" class="w3-bar-item w3-button w3-text-black">Техническое обслуживание и страхование лифтов
-		</a><a href="page.htm#5" onclick="hashemitter(5)" class="w3-bar-item w3-button w3-text-black">Прочие договоры со сторонними организациями
-		</a><a href="page.htm#6" onclick="hashemitter(6)" class="w3-bar-item w3-button w3-text-black">Протоколы общих собраний
-		</a><a href="page.htm#7" onclick="hashemitter(7)" class="w3-bar-item w3-button w3-text-black">Протоколы заседаний Правления
-		</a><a href="page.htm#8" onclick="hashemitter(8)" class="w3-bar-item w3-button w3-text-black">Документы ревизионной Комиссии
-      </a></div>
-    </div>
-    
-    <div class="w3-cell l2 w3-bar-item w3-button w3-hover-none w3-border-black w3-bottombar w3-hover-border-white">
-      <a href="#" class="smallcaps w3-button w3-block w3-hover-none w3-hover-text-white w3-black">Документы и отчетность</a>
-    </div>
-    <div class="w3-cell l2 w3-bar-item w3-button w3-hover-none w3-border-black w3-bottombar w3-hover-border-white">
-      <a href="#" class="smallcaps w3-button w3-block w3-hover-none w3-hover-text-white w3-black">Информация</a>
-    </div>
-    <div class="w3-cell l2 w3-bar-item w3-button w3-hover-none w3-border-black w3-bottombar w3-hover-border-white">
-      <a href="#" class="smallcaps w3-button w3-block w3-hover-none w3-hover-text-white w3-black">Личный кабинет</a>
-    </div>
-    <div class="w3-cell l2 w3-bar-item w3-button w3-hover-none w3-border-black w3-bottombar w3-hover-border-white">
-      <a href="#" class="smallcaps w3-button w3-block w3-hover-none w3-hover-text-white w3-black">Контакты</a>
-    </div>
-    <div class="w3-cell l2 w3-bar-item w3-button w3-hover-none w3-border-black w3-bottombar w3-hover-border-white">
-      <a href="#" class="smallcaps w3-button w3-block w3-hover-none w3-hover-text-white w3-black">Пожертвования</a>
-    </div>
-    </div>
-</div>
-<div style="min-height:100vh">
-<div class="table2" style="width:100%;min-height:100vh;border-collapse:collapse;">
-<div><div style="padding-left:10px;padding-right:10px;border-right:1px solid black;width:30%">
 
-<ul id="listed" class="pointylist">
-<li><a class="myhover" onclick="content(this)">Основные показатели финансово-хозяйственной деятельности
-</a></li><li><a class="myhover" onclick="content(this)">Учредительные и другие документы
-</a></li><li><a class="myhover" onclick="content(this)">Фото-отчёты
-</a></li><li><a class="myhover" onclick="content(this)">Договоры с поставщиками ресурсов
-</a></li><li><a class="myhover" onclick="content(this)">Техническое обслуживание и страхование лифтов
-</a></li><li><a class="myhover" onclick="content(this)">Прочие договоры со сторонними организациями
-</a></li><li><a class="myhover" onclick="content(this)">Протоколы общих собраний
-</a></li><li><a class="myhover" onclick="content(this)">Протоколы заседаний Правления
-</a></li><li><a class="myhover" onclick="content(this)">Документы ревизионной Комиссии
-</a></li></ul>
+
+function t () {
+
+	document.getElementById("menustate").setAttribute("class","w3-dropdown-content w3-bar-block w3-white w3-card-4")
 
 	
-</div>
 
-<div id="revealed" style="padding-left:10px;padding-right:10px;text-align:left;width:70%">
+}
 
-<div>
-<ul class="sublist">
-<li><a class="myhover" href="#">ТСЖ «Квартал 9/18 А1»</a><br>
-- Устав ТСЖ «Квартал 9/18 А1»<br>
-- Свидетельство ОГРН<br>
-- Члены правления и ревизионной комиссии<br>
-</li><li><a class="myhover" href="#">ТСЖ «Квартал 9/18 А2»</a><br>
-- Устав ТСЖ «Квартал 9/18 А2»<br>
-- Свидетельство ОГРН<br>
-- Члены правления и ревизионной комиссии<br>
-</li><li><a class="myhover" href="#">ТСН «Квартал 9/18 Паркинг А»</a><br>
-- Устав ТСН «Квартал 9/18 Паркинг А»<br>
-- Свидетельство ОГРН<br>
-- Члены правления и ревизионной комиссии<br>
-</li></ul>
-</div>
 
-<div>
-Учредители
-</div>
 
-<div>
-Фото
-</div>
+function hashemitter (h) {
 
-<div>
-Договоры
-</div>
+	h*=2
 
-<div>
-Тех
-</div>
+	if (!isNaN(h)) content(document.getElementById("listed").children[h])
 
-<div>
-Прочие
-</div>
+	document.getElementById("menustate").setAttribute("class","w3-hide")
 
-<div>
-Протоколы
-</div>
+	setTimeout(t,100)
 
-<div>
-Заседания
-</div>
+}
 
-<div>
-Ревизия
-</div>
+
+
+</script>
+
+</head>
+
+<body onload="hasher()">
+
+<footer>
+
+<div class="w3-container w3-third w3-center w3-cell w3-cell-middle">
+
+	<p>8&nbsp;(499)&nbsp;271&nbsp;55&nbsp;52&nbsp;-&nbsp;диспетчерская</p>
 
 </div>
 
+<div class="w3-container w3-third w3-center w3-cell w3-cell-middle">
+
+	<p>Наш адрес: </p>
 
 </div>
+
+<div class="w3-container w3-third w3-center w3-cell w3-cell-middle">
+
+	<p>Почта для вопросов по ТСЖ: </p> 
+
 </div>
-</div>	
-<footer class="w3-black">
-<div class="w3-cell-row w3-black allheight">
-<div class="w3-container w3-cell w3-right-align w3-cell-bottom">
-<span class="smallfont">© 2019 г.</span>
-</div>
-</div>
+
 </footer>
+
+<div class="afterfooter contentcontainer">
+
+	<img src="backg0.png">
+
+	<div class="realcontent allheight">
+
+		<div class="w3-cell-row allheight">
+
+		<div class="w3-container w3-cell w3-right-align w3-cell-middle">
+
+		<a class="link" href="index.htm">
+
+		<span class="giantfont"><b>ТСЖ Квартал 9/18 А&nbsp;&nbsp;&nbsp;</b></span>
+
+		</a>
+
+		</div>
+
+		</div>
+
+	</div>
+
+</div>
+
+<div class="w3-cell-row w3-row w3-black w3-bar">
+
+	
+
+	<div class="w3-cell" style="width:12.5%"></div>
+
+	
+
+	<div>
+
+    <div class="w3-cell l2 w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-white w3-dropdown-hover" style="background-color:black">
+
+      <button class="smallcaps w3-button w3-block w3-hover-none w3-hover-text-white w3-black">Переход от УК к ТСЖ</button>
+
+      <div id="menustate" class="w3-dropdown-content w3-bar-block w3-white w3-card-4">
+<a href="page.htm#0" onclick="hashemitter(0)" class="w3-bar-item w3-button w3-text-black">Основные показатели финансово-хозяйственной деятельности</a>
+<a href="page.htm#1" onclick="hashemitter(1)" class="w3-bar-item w3-button w3-text-black">Учредительные и другие документы</a>
+<a href="page.htm#2" onclick="hashemitter(2)" class="w3-bar-item w3-button w3-text-black">Фото-отчёты</a>
+<a href="page.htm#3" onclick="hashemitter(3)" class="w3-bar-item w3-button w3-text-black">Договоры с поставщиками ресурсов</a>
+<a href="page.htm#4" onclick="hashemitter(4)" class="w3-bar-item w3-button w3-text-black">Техническое обслуживание и страхование лифтов</a>
+<a href="page.htm#5" onclick="hashemitter(5)" class="w3-bar-item w3-button w3-text-black">Прочие договоры со сторонними организациями</a>
+<a href="page.htm#6" onclick="hashemitter(6)" class="w3-bar-item w3-button w3-text-black">Протоколы общих собраний</a>
+<a href="page.htm#7" onclick="hashemitter(7)" class="w3-bar-item w3-button w3-text-black">Протоколы заседаний Правления</a>
+<a href="page.htm#8" onclick="hashemitter(8)" class="w3-bar-item w3-button w3-text-black">Документы ревизионной Комиссии</a>
+<a href="page.htm#9" onclick="hashemitter(9)" class="w3-bar-item w3-button w3-text-black">Открытые письма собственников</a>
+<a href="page.htm#10" onclick="hashemitter(10)" class="w3-bar-item w3-button w3-text-black">Тарифы на коммунальные услуги</a>
+</div>
+
+    </div>
+
+    
+
+    <div class="w3-cell l2 w3-bar-item w3-button w3-hover-none w3-border-black w3-bottombar w3-hover-border-white">
+
+      <a href="#" class="smallcaps w3-button w3-block w3-hover-none w3-hover-text-white w3-black">Документы и отчетность</a>
+
+    </div>
+
+    <div class="w3-cell l2 w3-bar-item w3-button w3-hover-none w3-border-black w3-bottombar w3-hover-border-white">
+
+      <a href="#" class="smallcaps w3-button w3-block w3-hover-none w3-hover-text-white w3-black">Информация</a>
+
+    </div>
+
+    <div class="w3-cell l2 w3-bar-item w3-button w3-hover-none w3-border-black w3-bottombar w3-hover-border-white">
+
+      <a href="#" class="smallcaps w3-button w3-block w3-hover-none w3-hover-text-white w3-black">Личный кабинет</a>
+
+    </div>
+
+    <div class="w3-cell l2 w3-bar-item w3-button w3-hover-none w3-border-black w3-bottombar w3-hover-border-white">
+
+      <a href="#" class="smallcaps w3-button w3-block w3-hover-none w3-hover-text-white w3-black">Контакты</a>
+
+    </div>
+
+    <div class="w3-cell l2 w3-bar-item w3-button w3-hover-none w3-border-black w3-bottombar w3-hover-border-white">
+
+      <a href="#" class="smallcaps w3-button w3-block w3-hover-none w3-hover-text-white w3-black">Пожертвования</a>
+
+    </div>
+
+    
+
+    </div>
+
+</div>
+
+<div style="min-height:100vh">
+
+<div class="table2" style="width:100%;min-height:100vh">
+
+<div><div style="padding-left:10px;padding-right:10px;border-right:1px solid black;width:30%;min-height:100vh;position:relative;">
+
+
+
+<div id="listed" class="pointylist">
+<!--00--><a class="myhover" onclick="content(this)">Основные показатели финансово-хозяйственной деятельности</a><br>
+<!--11--><a class="myhover" onclick="content(this)">Учредительные и другие документы</a><br>
+<!--22--><a class="myhover" onclick="content(this)">Фото-отчёты</a><br>
+<!--33--><a class="myhover" onclick="content(this)">Договоры с поставщиками ресурсов</a><br>
+<!--44--><a class="myhover" onclick="content(this)">Техническое обслуживание и страхование лифтов</a><br>
+<!--55--><a class="myhover" onclick="content(this)">Прочие договоры со сторонними организациями</a><br>
+<!--66--><a class="myhover" onclick="content(this)">Протоколы общих собраний</a><br>
+<!--77--><a class="myhover" onclick="content(this)">Протоколы заседаний Правления</a><br>
+<!--88--><a class="myhover" onclick="content(this)">Документы ревизионной Комиссии</a><br>
+<!--99--><a class="myhover" onclick="content(this)">Открытые письма собственников</a><br>
+<!--1010--><a class="myhover" onclick="content(this)">Тарифы на коммунальные услуги</a><br>
+</div>
+
+</div>
+
+<div style="width:3px"></div>
+
+<div id="revealed" style="border-left:1px double black;padding-left:10px;padding-right:10px;min-height:100vh;text-align:left;width:70%;position:absolute;">
+<div>
+
+<ul class="sublist">
+
+<li><a class="myhover" href="#">ТСЖ «Квартал 9/18 А1»</a><br>
+
+- Устав ТСЖ «Квартал 9/18 А1»<br>
+
+- Свидетельство ОГРН<br>
+
+- Члены правления и ревизионной комиссии<br>
+
+</li><li><a class="myhover" href="#">ТСЖ «Квартал 9/18 А2»</a><br>
+
+- Устав ТСЖ «Квартал 9/18 А2»<br>
+
+- Свидетельство ОГРН<br>
+
+- Члены правления и ревизионной комиссии<br>
+
+</li><li><a class="myhover" href="#">ТСН «Квартал 9/18 Паркинг А»</a><br>
+
+- Устав ТСН «Квартал 9/18 Паркинг А»<br>
+
+- Свидетельство ОГРН<br>
+
+- Члены правления и ревизионной комиссии<br>
+
+</li></ul>
+
+</div>
+<div><ul>Страница в разработке</ul></div>
+<div><ul>Страница в разработке</ul></div>
+<div><ul>Страница в разработке</ul></div>
+<div><ul>Страница в разработке</ul></div>
+<div><ul>Страница в разработке</ul></div>
+<div><ul>Страница в разработке</ul></div>
+<div><ul>Страница в разработке</ul></div>
+<div><ul>Страница в разработке</ul></div>
+<div><ul>Страница в разработке</ul></div>
+<div><ul>Страница в разработке</ul></div>
+</div>
+
+</div>
+
+</div>
+
+</div>	
+
+<footer class="w3-black">
+
+<div class="w3-cell-row w3-black allheight">
+
+<div class="w3-container w3-cell w3-right-align w3-cell-bottom">
+
+<span class="smallfont">© 2019 г.</span>
+
+</div>
+
+</div>
+
+</footer>
+
 </body>
+
 </html>

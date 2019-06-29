@@ -1,197 +1,535 @@
 <!DOCTYPE html>
+
 <html>
+
 <head>
+
 <title>ТСЖ Квартал 9/18 А</title>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <link rel="stylesheet" href="w3.css">
+
 <style>
+
 @font-face {
+
 	font-family: custom;
+
 	src: url(Bahnschrift.ttf);
+
 }
+
+
+
+#revealed > div {
+
+	display: none;
+
+}
+
+
+
 body, body > * {
+
 	font-family: custom;
+
 }
+
 .mainmenu {
+
 	width:13em;
+
 	height:13em;
+
 	background:rgba(255,255,255,0.6)
+
 }
+
 .mainmenu:hover {
+
 	background:rgba(255,255,255,0.9)
+
 }
+
 html, body {
+
   height: 100%;
+
   margin: 0;
+
 }
+
 footer {
+
 	height: 3.75em;
+
 	font-family: custom;
+
 	font-size: 1.1em;
+
 }
+
 .contacts {
+
 	padding:2.2em;
+
 	font-size:1.2em;
+
 	line-height:1.3em;
+
 }
+
 .welcome {
+
 	padding: 2em;
+
 	line-height: 1.3em;
+
 	background: rgba(255,255,255,0.6);
+
 }
+
 .afterfooter > * {
+
 	width: 100%;
+
 }
+
 .contentcontainer {
+
 	position: relative;
+
 }
+
 .realcontent {
+
 	position: absolute;
+
 	top: 0px;
+
 	left: 0px;
+
 }
+
 .smallcaps {
+
   text-transform: uppercase;
+
 }
+
 .allheight {
+
 	height: 100%;
+
 }
+
 .smallfont {
+
 	font-size: 0.9em;
+
 }
+
 .middlefont {
+
 	font-size: 1.2em;
+
 }
+
 .giantfont {
+
 	font-size: 2.2em;
+
 }
+
 .transparent {
+
 	background:rgba(255,255,255,0.6)
+
 }
+
 .link {
+
 	text-decoration: none;
+
 }
+
+.table {
+
+	display:table;
+
+}
+
+.table > div {
+
+	display:table-row;
+
+}
+
+.table > div > div {
+
+	display:table-cell;
+
+	vertical-align:middle;
+
+	text-align:center;
+
+}
+
+.table2 {
+
+	display:table;
+
+}
+
+.table2 > div {
+
+	display:table-row;
+
+}
+
+.table2 > div > div {
+
+	display:table-cell;
+
+}
+
+.myhover {
+
+	padding-left:1em;
+
+	display:inline-block;
+
+	margin:5px;
+
+	text-decoration: none;
+
+	cursor:pointer;
+
+}
+
+.mynow {
+
+	font-weight:bold;
+
+	text-decoration: underline;	
+
+}
+
+.myhover:hover {
+
+	font-weight:bold;
+
+}
+
 </style>
+
+<script>
+
+
+
+function content (e) {
+
+	var a = document.getElementById("revealed")
+
+	var c = e.parentNode.children
+
+	var x = Array.prototype.indexOf.call(c, e)
+
+	var l = c.length
+
+	for (var i=0;i<l;i+=2) {
+
+		c[i].setAttribute("class","myhover")
+
+		a.children[i/2].style.display=""
+
+	}
+
+	c[x].setAttribute("class","myhover mynow")
+
+	a.children[x/2].style.display="inline"
+
+}
+
+function hasher () {
+
+	hashemitter(parseInt(location.hash.slice(1)))
+
+}
+
+
+
+function t () {
+
+	document.getElementById("menustate").setAttribute("class","w3-dropdown-content w3-bar-block w3-white w3-card-4")
+
+	
+
+}
+
+
+
+function hashemitter (h) {
+
+	h*=2
+
+	if (!isNaN(h)) content(document.getElementById("listed").children[h])
+
+	document.getElementById("menustate").setAttribute("class","w3-hide")
+
+	setTimeout(t,100)
+
+}
+
+
+
+</script>
+
 </head>
-<body>
+
+<body onload="hasher()">
+
 <footer>
+
 <div class="w3-container w3-third w3-center w3-cell w3-cell-middle">
+
 	<p>8&nbsp;(499)&nbsp;271&nbsp;55&nbsp;52&nbsp;-&nbsp;диспетчерская</p>
+
 </div>
+
 <div class="w3-container w3-third w3-center w3-cell w3-cell-middle">
+
 	<p>Наш адрес: </p>
+
 </div>
+
 <div class="w3-container w3-third w3-center w3-cell w3-cell-middle">
+
 	<p>Почта для вопросов по ТСЖ: </p> 
+
 </div>
+
 </footer>
+
 <div class="afterfooter contentcontainer">
+
 	<img src="backg0.png">
+
 	<div class="realcontent allheight">
+
 		<div class="w3-cell-row allheight">
+
 		<div class="w3-container w3-cell w3-right-align w3-cell-middle">
+
+		<a class="link" href="index.htm">
+
 		<span class="giantfont"><b>ТСЖ Квартал 9/18 А&nbsp;&nbsp;&nbsp;</b></span>
+
+		</a>
+
 		</div>
+
 		</div>
+
 	</div>
+
 </div>
+
 <div class="w3-cell-row w3-row w3-black w3-bar">
+
+	
+
+	<div class="w3-cell" style="width:12.5%"></div>
+
+	
+
 	<div>
-        <div class="w3-cell l2 w3-bar-item w3-button w3-hover-none w3-border-black w3-bottombar w3-hover-border-white w3-dropdown-hover" style="background-color:black">
+
+    <div class="w3-cell l2 w3-bar-item w3-button w3-hover-none w3-border-black w3-bottombar w3-hover-border-white w3-dropdown-hover" style="background-color:black">
+
       <button class="smallcaps w3-button w3-block w3-hover-none w3-hover-text-white w3-black">Переход от УК к ТСЖ</button>
-      <div class="w3-dropdown-content w3-bar-block w3-white w3-card-4">
-		<a href="page.htm#0" class="w3-bar-item w3-button w3-text-black">Основные показатели финансово-хозяйственной деятельности
-        </a><a href="page.htm#1" class="w3-bar-item w3-button w3-text-black">Учредительные и другие документы
-        </a><a href="page.htm#2" class="w3-bar-item w3-button w3-text-black">Фото-отчёты
-        </a><a href="page.htm#3" class="w3-bar-item w3-button w3-text-black">Договоры с поставщиками ресурсов
-        </a><a href="page.htm#4" class="w3-bar-item w3-button w3-text-black">Техническое обслуживание и страхование лифтов
-		</a><a href="page.htm#5" class="w3-bar-item w3-button w3-text-black">Прочие договоры со сторонними организациями
-		</a><a href="page.htm#6" class="w3-bar-item w3-button w3-text-black">Протоколы общих собраний
-		</a><a href="page.htm#7" class="w3-bar-item w3-button w3-text-black">Протоколы заседаний Правления
-		</a><a href="page.htm#8" class="w3-bar-item w3-button w3-text-black">Документы ревизионной Комиссии
-      </a></div>
-    </div>
-    
-    <div class="w3-cell l2 w3-bar-item w3-button w3-hover-none w3-border-black w3-bottombar w3-hover-border-white">
-      <a href="#" class="smallcaps w3-button w3-block w3-hover-none w3-hover-text-white w3-black">Документы и отчетность</a>
-    </div>
-    <div class="w3-cell l2 w3-bar-item w3-button w3-hover-none w3-border-black w3-bottombar w3-hover-border-white">
-      <a href="#" class="smallcaps w3-button w3-block w3-hover-none w3-hover-text-white w3-black">Информация</a>
-    </div>
-    <div class="w3-cell l2 w3-bar-item w3-button w3-hover-none w3-border-black w3-bottombar w3-hover-border-white">
-      <a href="#" class="smallcaps w3-button w3-block w3-hover-none w3-hover-text-white w3-black">Личный кабинет</a>
-    </div>
-    <div class="w3-cell l2 w3-bar-item w3-button w3-hover-none w3-border-black w3-bottombar w3-hover-border-white">
-      <a href="#" class="smallcaps w3-button w3-block w3-hover-none w3-hover-text-white w3-black">Контакты</a>
-    </div>
-    <div class="w3-cell l2 w3-bar-item w3-button w3-hover-none w3-border-black w3-bottombar w3-hover-border-white">
-      <a href="#" class="smallcaps w3-button w3-block w3-hover-none w3-hover-text-white w3-black">Пожертвования</a>
-    </div>
-    </div>
+
+      <div id="menustate" class="w3-dropdown-content w3-bar-block w3-white w3-card-4">
+<a href="page.htm#0" onclick="hashemitter(0)" class="w3-bar-item w3-button w3-text-black">Основные показатели финансово-хозяйственной деятельности</a>
+<a href="page.htm#1" onclick="hashemitter(1)" class="w3-bar-item w3-button w3-text-black">Учредительные и другие документы</a>
+<a href="page.htm#2" onclick="hashemitter(2)" class="w3-bar-item w3-button w3-text-black">Фото-отчёты</a>
+<a href="page.htm#3" onclick="hashemitter(3)" class="w3-bar-item w3-button w3-text-black">Договоры с поставщиками ресурсов</a>
+<a href="page.htm#4" onclick="hashemitter(4)" class="w3-bar-item w3-button w3-text-black">Техническое обслуживание и страхование лифтов</a>
+<a href="page.htm#5" onclick="hashemitter(5)" class="w3-bar-item w3-button w3-text-black">Прочие договоры со сторонними организациями</a>
+<a href="page.htm#6" onclick="hashemitter(6)" class="w3-bar-item w3-button w3-text-black">Протоколы общих собраний</a>
+<a href="page.htm#7" onclick="hashemitter(7)" class="w3-bar-item w3-button w3-text-black">Протоколы заседаний Правления</a>
+<a href="page.htm#8" onclick="hashemitter(8)" class="w3-bar-item w3-button w3-text-black">Документы ревизионной Комиссии</a>
+<a href="page.htm#9" onclick="hashemitter(9)" class="w3-bar-item w3-button w3-text-black">Открытые письма собственников</a>
+<a href="page.htm#10" onclick="hashemitter(10)" class="w3-bar-item w3-button w3-text-black">Тарифы на коммунальные услуги</a>
 </div>
+
+    </div>
+
+    
+
+    <div class="w3-cell l2 w3-bar-item w3-button w3-hover-none w3-border-black w3-bottombar w3-hover-border-white">
+
+      <a href="#" class="smallcaps w3-button w3-block w3-hover-none w3-hover-text-white w3-black">Документы и отчетность</a>
+
+    </div>
+
+    <div class="w3-cell l2 w3-bar-item w3-button w3-hover-none w3-border-black w3-bottombar w3-hover-border-white">
+
+      <a href="#" class="smallcaps w3-button w3-block w3-hover-none w3-hover-text-white w3-black">Информация</a>
+
+    </div>
+
+    <div class="w3-cell l2 w3-bar-item w3-button w3-hover-none w3-border-black w3-bottombar w3-hover-border-white">
+
+      <a href="#" class="smallcaps w3-button w3-block w3-hover-none w3-hover-text-white w3-black">Личный кабинет</a>
+
+    </div>
+
+    <div class="w3-cell l2 w3-bar-item w3-button w3-hover-none w3-border-black w3-bottombar w3-hover-border-white">
+
+      <a href="#" class="smallcaps w3-button w3-block w3-hover-none w3-hover-text-white w3-black">Контакты</a>
+
+    </div>
+
+    <div class="w3-cell l2 w3-bar-item w3-button w3-hover-none w3-border-black w3-bottombar w3-hover-border-white">
+
+      <a href="#" class="smallcaps w3-button w3-block w3-hover-none w3-hover-text-white w3-black">Пожертвования</a>
+
+    </div>
+
+    </div>
+
+</div>
+
 <div class="afterfooter contentcontainer">
+
 <img src="backg1.png">
+
 <div class="realcontent">
 
+
+
 	<div class="w3-bar" class="transparent">
+
 	<div class="middlefont welcome">
+
 	<u><b>Добро пожаловать!</b></u><br><br>
+
 	Этот сайт - это проект для нашего будущего ТСЖ. Здесь представлены основные разделы сайта, которые будут заполняться после организации ТСЖ по мере его работы. Вы можете увидеть, каким будет наше ТСЖ и какую информацию и сервисы смогут получить жители.
+
 	</div>
+
 	</div>
+
 		
+
 	<div class="w3-container w3-center" style="padding:1.5em;"><b>
+
 	<div class="middlefont">
+
 	  <div class="w3-container w3-cell w3-cell-middle w3-padding s3">
+
 		<a href="#" class="link">
+
 		<div class="w3-cell-row mainmenu">
+
 		<div class="w3-container w3-center w3-cell w3-cell-middle middlefont">СРАВНИТЕЛЬНАЯ ТАБЛИЦА УК И ТСЖ</div>
+
 		</div></a>
+
 	  </div>
+
 	  <div class="w3-container w3-cell w3-cell-middle w3-padding s3">
+
 		<a href="#" class="link">
+
 		<div class="w3-cell-row mainmenu">
+
 		<div class="w3-container w3-center w3-cell w3-cell-middle middlefont">ПРОБЛЕМЫ С ТЕКУЩЕЙ УК</div>
+
 		</div></a>
+
 	  </div>
+
 	  <div class="w3-container w3-cell w3-cell-middle w3-padding s3">
+
 		<a href="#" class="link">
+
 		<div class="w3-cell-row mainmenu">
+
 		<div class="w3-container w3-center w3-cell w3-cell-middle middlefont">ПРОЕКТЫ И ПРЕДЛОЖЕНИЯ, ОПЫТ ДРУГИХ ДОМОВ</div>
+
 		</div></a>
+
 	  </div>
+
 	  <div class="w3-container w3-cell w3-cell-middle w3-padding s3">
+
 		<a href="#" class="link">
+
 		<div class="w3-cell-row mainmenu">
+
 		<div class="w3-container w3-center w3-cell w3-cell-middle middlefont">ОСНОВНЫЕ ВОПРОСЫ И ОТВЕТЫ НА НИХ</div>
+
 		</div></a>
+
 	  </div>
+
 	</b></div>
+
 	</div>
 
+
+
 </div>
+
 </div>
+
 </div>
+
 <div>
+
 	<div class="contacts">
+
 	Контакты:
+
 	<pre>
+
 	
+
 	
+
 	
+
 	</pre>
+
 	</div>
-</div>
-<div>
 
 </div>
+
+<div>
+
+
+
+</div>
+
 <footer class="w3-black">
+
 <div class="w3-cell-row w3-black allheight">
+
 <div class="w3-container w3-cell w3-right-align w3-cell-bottom">
+
 <span class="smallfont">© 2019 г.</span>
+
 </div>
+
 </div>
+
 </footer>
+
 </body>
+
 </html>
