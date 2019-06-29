@@ -1,0 +1,112 @@
+@font-face {
+	font-family: custom;
+	src: url(Bahnschrift.ttf);
+}
+#revealed > div {
+	display: none;
+}
+body, body > * {
+	font-family: custom;
+}
+.mainmenu {
+	width:13em;
+	height:13em;
+	background:rgba(255,255,255,0.6)
+}
+.mainmenu:hover {
+	background:rgba(255,255,255,0.9)
+}
+html, body {
+  height: 100%;
+  margin: 0;
+}
+footer {
+	height: 3.75em;
+	font-family: custom;
+	font-size: 1.1em;
+}
+.contacts {
+	padding:2.2em;
+	font-size:1.2em;
+	line-height:1.3em;
+}
+.welcome {
+	padding: 2em;
+	line-height: 1.3em;
+	background: rgba(255,255,255,0.6);
+}
+.afterfooter > * {
+	width: 100%;
+}
+.contentcontainer {
+	position: relative;
+}
+.realcontent {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+.smallcaps {
+  text-transform: uppercase;
+}
+.allheight {
+	height: 100%;
+}
+.smallfont {
+	font-size: 0.9em;
+}
+.middlefont {
+	font-size: 1.2em;
+}
+.giantfont {
+	font-size: 2.2em;
+}
+.transparent {
+	background:rgba(255,255,255,0.6)
+}
+.link {
+	text-decoration: none;
+}
+.table {
+	display:table;
+}
+.table > div {
+	display:table-row;
+}
+.table > div > div {
+	display:table-cell;
+	vertical-align:middle;
+	text-align:center;
+}
+.table2 {
+	display:table;
+}
+.table2 > div {
+	display:table-row;
+}
+.table2 > div > div {
+	display:table-cell;
+}
+.myhover {
+	padding-left:1em;
+	display:inline-block;
+	margin:5px;
+	text-decoration: none;
+	cursor:pointer;
+}
+.mynow {
+	font-weight:bold;
+	text-decoration: underline;	
+}
+.myhover:hover {
+	font-weight:bold;
+}
+.barspace {
+	width:12.5%;
+}
+.blackback {
+	background-color:black;
+}
+.basepadding {
+	padding:1.5em;
+}
